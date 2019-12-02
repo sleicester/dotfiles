@@ -1,74 +1,43 @@
-# Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
-
-# Make sure apps get installed in system Applications dir
-cask_args appdir: '/Applications'
-
-# Install ZSH
-brew 'zsh'
-brew 'zsh-completions'
-
-# Install GNU core utilities (those that come with OS X are outdated)
-brew 'coreutils'
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew 'findutils'
-
-# Install Bash 4
-brew 'bash'
-
-# Install more recent versions of some OS X tools
-brew 'homebrew/dupes/grep'
-
-# Install Binaries
-brew 'awscli'
-brew 'git'
-brew 'hub'
-brew 'tree'
-brew 'mackup'
-brew 'node'
-brew 'trash'
-brew 'wget'
-
-# Development
-brew 'php70', args: ['with-debug', 'without-apache']
-brew 'mariadb'
-
-# Apps
-cask 'alfred'
-cask 'dropbox'
-cask 'firefox'
-cask 'goofy'
-cask 'google-chrome'
-cask 'google-drive'
-cask 'iterm2'
-cask 'phpstorm'
-cask 'screenhero'
-cask 'sequel-pro'
-cask 'skype'
-cask 'slack'
-cask 'spectacle'
-cask 'sublime-text3'
-cask 'transmit'
-cask 'vagrant'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'vlc'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
-
-# Fonts
-cask 'font-sauce-code-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "bash-completion"
+brew "composer"
+brew "dnsmasq", restart_service: true
+brew "git"
+brew "git-extras"
+brew "mackup"
+brew "mas"
+brew "mysql@5.7", restart_service: true, link: true
+brew "nginx", restart_service: true
+brew "php", restart_service: true, link: false
+brew "php@7.3", restart_service: true, link: true
+brew "redis", restart_service: true
+brew "wget"
+brew "yarn"
+brew "zsh"
+brew "zsh-completions"
+cask "basecamp"
+cask "beyond-compare"
+cask "firefox"
+cask "github"
+cask "google-chrome"
+cask "iterm2"
+cask "kaleidoscope"
+cask "skype-for-business"
+cask "slack"
+cask "spotify"
+cask "sublime-text"
+cask "tableplus"
+cask "transmit"
+cask "visual-studio-code"
+mas "1Password 7", id: 1333542190
+mas "Dato", id: 1470584107
+mas "Dynamo", id: 1445910651
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
